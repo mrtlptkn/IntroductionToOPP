@@ -1,0 +1,61 @@
+public class Car {
+
+    // private olduklları için field dedik
+    // field private tanımlanır class özeldir
+    private String engineType; // elektrik, benzin, dizel
+    private String model; // model
+    private String brand; // marka
+    private boolean started; // arabanın çalışıp çalışmadığı
+
+    // getter, setter -> javada private olan field değerlere başka bir sınıf üzerinden erişbilmek için public
+    // yapmamız gerekir.
+
+    // getter -> field değerini okumak için kullanılır
+    // setter -> field değer atama işlemi için kullanılır
+
+    // get set edilen son güncel değeri okumamızı sağlar.
+
+    public String getEngineType() {
+        return engineType;
+    }
+
+    public void setEngineType(String engineType) {
+        this.engineType = engineType;
+    }
+
+    public String getModel() {
+        return model;
+    }
+
+    public void setModel(String model) {
+        this.model = model;
+    }
+
+    public String getBrand() {
+        return brand;
+    }
+
+    public void setBrand(String brand) {
+        this.brand = brand;
+    }
+
+    public boolean isStarted() {
+        return started;
+    }
+
+    // behaviors
+    public void start() {
+        System.out.println("Araba çalıştı");
+        started=true;
+    }
+
+    public void stop() {
+        System.out.println("Araba durdu");
+        started=false;
+    }
+
+
+
+    // aynı zamanda classlarında diğer üyesi methodlardır
+    // classlar birbirinden nitelikleri ile ayrılırken (fields) aynı zamanda belirli bir davranış de gösteririr.
+}
