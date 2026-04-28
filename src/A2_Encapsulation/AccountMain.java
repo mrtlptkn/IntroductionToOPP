@@ -23,11 +23,10 @@ public class AccountMain {
 
 
         // encapsulation yapmadığımzıdan tek tek kodu yazmak ve doğru yöntemek zorundayız.
-        Account acc2 = new Account();
-        acc2.balance = 5000;
-        acc2.balance -= 20000;
-
-        System.out.println("Balance ->" + acc2.balance);
+        // Account acc2 = new Account();
+        //acc2.balance = 5000;
+        //acc2.balance -= 20000;
+        //System.out.println("Balance ->" + acc2.balance);
 
 
 

@@ -9,12 +9,12 @@ import java.util.UUID;
 
 public class Account {
 
-    public UUID accountNumber;
-    public double balance = 0;
-    public LocalDate accountOpeningAt;
-    public LocalDate closingDate;
-    public String closingReason;
-    public boolean closed;
+    private UUID accountNumber;
+    private double balance = 0;
+    private LocalDate accountOpeningAt;
+    private LocalDate closingDate;
+    private String closingReason;
+    private boolean closed;
 
     // dışardaki müşteri bu nesnede nelerin döndüğünü bilmez
     public  void accountOpening() {
