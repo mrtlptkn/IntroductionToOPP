@@ -1,3 +1,7 @@
+
+
+// Javada her class bir Object'den türediği için
+
 public class Car {
 
     // private olduklları için field dedik
@@ -66,6 +70,19 @@ public class Car {
         started=false;
     }
 
+    // Override bir anatasyondur.
+    // Javada Anatasayonlar class yada method üzerinde yazılır. işaretleyicidirler.
+    @Override
+    public String toString() {
+
+        // javada super keyword kaltım alınan sınıf demek. Gizli kalıtım Object.
+        return "Car{" +
+                "engineType='" + engineType + '\'' +
+                ", model='" + model + '\'' +
+                ", brand='" + brand + '\'' +
+                ", started=" + started +
+                '}';
+    }
 
 
     // aynı zamanda classlarında diğer üyesi methodlardır

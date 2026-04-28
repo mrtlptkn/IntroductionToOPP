@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class CarMain {
 
     public static void main(String[] args) {
@@ -85,6 +87,8 @@ public class CarMain {
         Car car8 = car7;
         car7.setEngineType("Dizel");
 
+        System.out.println("car7 equals to car8 -> " + car7.equals(car8)); // true
+
 
         int a = 5;
         int y = a;
@@ -94,6 +98,41 @@ public class CarMain {
         // value type değerler stack üzerinde sıralı bir şekilde yürütülür.
 
         // Stackoverflow -> aşılması için çok falza method içerisinde değişken anlık olarak tüketilmelidir.
+
+
+        // Javada bütün değişkenler object olarak yazılabilir. Aslında herşey Object sınıfından türer.
+        // aşağıda ise bunun kanıtını yapalım
+
+        Object o = "Hande";
+        Object op=5;
+        Object ff = true;
+        Object cc = 5.5;
+        Object rr = 5.2f;
+        Object cgh = 'a';
+
+        // Bir Object 3 farklı methoda sahip
+        // 1. equals -> 2 farklı nesnenin yanı referansa bakıp bakmadığını kontrol ederiz.
+        // 2. hashCode -> nesnenin DNA, her nesne kendisine ait bir hascode ile üretilir. Her doğan kişinin vatandaşlık nosu gibi bir değer.
+        // 3. toString -> default ramdaki referansını yazdı.
+
+        System.out.println("car1" + car1.hashCode() + " car2 : " + car2.hashCode());
+        System.out.println("car1 is equal to car2 references" + car1.equals(car2));
+        System.out.println("car1 toString" + car1.toString());
+
+
+        // upcasting
+        // bu bu şekilde tabiki kullanmak performans açısından çok kötü olurdu. O yüzden java bize wrapper classları verdi. int için Integer, boolean için Boolean gibi.
+
+        // Java wrapper types -> primitive type değerleri object olarak kullanmamızı sağlar. Böylece primitive type değerleride object gibi davranır.
+        // Performans açısından primitive type değerler daha hızlı çalışır. O yüzden mümkün olduğunca primitive type değerler kullanmamız gerekir. Mümkün gerekmedikçe primative tipleri kullan ama ihtiyacın varsa wrapper typedan da yararlanabilirsin
+        // dün anlttığımız tüm tipler wrapper type olarak yazılabilir.
+        Integer ii = 5;
+        byte bv= ii.byteValue();
+        int result = Integer.compare(5,10);
+        // ArrayList<int> numbers = new ArrayList<>();
+        // Özel durum ArrayList collection ile çalışırkenm wrapper type kullanmamız lazım.
+        // ArrayList<Integer> numbers2 = new ArrayList<>();
+        int h = 4;
 
     }
 }
