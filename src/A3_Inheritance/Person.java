@@ -3,6 +3,8 @@ package A3_Inheritance;
 // super class
 public class Person {
 
+
+
     private String firstName;
 
     public String getFirstName() {
@@ -36,6 +38,18 @@ public class Person {
     public void setCitizenNumber(String citizenNumber) {
         CitizenNumber = citizenNumber;
     }
+
+
+    public Person() {
+    }
+
+    public Person(String firstName, String middleName, String lastName) {
+        this.firstName = firstName;
+        this.middleName = middleName;
+        this.lastName = lastName;
+    }
+
+
 
     private String middleName;
     private String lastName;

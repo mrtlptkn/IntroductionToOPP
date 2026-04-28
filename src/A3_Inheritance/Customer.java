@@ -5,6 +5,13 @@ package A3_Inheritance;
 
 public class Customer extends  Person{
 
+    public Customer() {
+    }
+
+    public Customer(String firstName, String middleName, String lastName) {
+        super(firstName, middleName, lastName);
+    }
+
     public String getAddress() {
         return address;
     }

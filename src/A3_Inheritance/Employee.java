@@ -4,6 +4,14 @@ package A3_Inheritance;
 
 
 public class Employee extends Person {
+
+    public Employee() {
+    }
+
+    public Employee(String firstName, String middleName, String lastName) {
+        super(firstName, middleName, lastName);
+    }
+
     public String getSocialIdentificationNumber() {
         return socialIdentificationNumber;
     }
