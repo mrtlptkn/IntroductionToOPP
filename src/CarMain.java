@@ -2,6 +2,8 @@ public class CarMain {
 
     public static void main(String[] args) {
 
+        // javada default olarak 1 adet boş constructor vardır. Car() constructorı gibi.
+        // isteğe göre birden fazla farklı nesne initialize tanımı yapılabilir.
         Car car1 = new Car();
         car1.setBrand("BMW");
         car1.setModel("X5");
@@ -29,6 +31,10 @@ public class CarMain {
         car4.start();
 
 
+        Car car5  = new Car("Elektrik","Panda","Fiat");
+        car5.start();
+
+
         // Not: Bütün arabaları ilgilendiren genel davranışlar var ise,
         // bu davranışları Car classında tanımlayarak bütün arabaların bu davranışa sahip olmasını sağlarız.
         car1.stop();
@@ -39,11 +45,12 @@ public class CarMain {
         // Not: Class ile Nesne (Object) aynı şey değildir.
 
         // otogalerim var
-        Car[] cars = new Car[4];
+        Car[] cars = new Car[5];
         cars[0] = car1;
         cars[1]=car2;
         cars[2] = car3;
         cars[3]=car4;
+        cars[4]=car5;
 
         for (int i = 0; i < cars.length; i++) {
             System.out.println("Marka: " + cars[i].getBrand() + " Model: " + cars[i].getModel() + " Motor Tipi: " + cars[i].getEngineType());

@@ -15,6 +15,18 @@ public class Car {
 
     // get set edilen son güncel değeri okumamızı sağlar.
 
+    public Car(){}
+
+    public Car(String engineType,String model, String brand) {
+        // default constructor
+        this.brand = brand;
+        this.model = model;
+        this.engineType  = engineType;
+    }
+
+    // Not: Defaultda contrcutor zorunluluğu yok ama boş dışında parametreli bir contructor tanımı yaparsak bu durumda boş constructor kullanmak için bu default contructora tanımlamamız lazım.
+
+
     public String getEngineType() {
         return engineType;
     }
