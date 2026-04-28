@@ -68,7 +68,32 @@ public class CarMain {
         // Verinin Çekilme aşaması: READ Table -> Car Class (RAM) -> Car Array -> Show Terminal or Screen.
 
 
+//        Car car6;
+//        car6.setModel("Fiesta");
+//        car6.setBrand("Ford");
+        // variable car6 might not have been initialized
+        // Nesneyi new keyword ile initialize etmek zorundayız. yoksa yukarıdaki istisnai duruma düşeriz
 
+
+        // car7 referans ise @324324
+        Car car7 = new Car("Benzin","Polo Life","Volkswagen");
+        // car7 referans ise @324324 aynı referansı gösterir.
+        car7.setModel("Golf R");
+
+        // Car8 de car7'nin referansını kullanır
+        // aşağıdaki yazım tehlikeli bir yazımdır. Böyle bir kod yazmamamız gerekir.
+        Car car8 = car7;
+        car7.setEngineType("Dizel");
+
+
+        int a = 5;
+        int y = a;
+        y = 10;
+
+        // Referans type değerler, heap üzerindeki referansa bakarlar. Aynı referansı kullanırlarsa bir değiştiğinde diğerininde değerleri değişir. Ama value typeda böyle bir durum yoktur.
+        // value type değerler stack üzerinde sıralı bir şekilde yürütülür.
+
+        // Stackoverflow -> aşılması için çok falza method içerisinde değişken anlık olarak tüketilmelidir.
 
     }
 }
